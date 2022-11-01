@@ -3,22 +3,21 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { People } from '../types'
 
 export interface FavouritesState {
-	character: People[]
+	characters: People[]
 }
 
-const initialState: FavouritesState = { character: [] }
+const initialState: FavouritesState = { characters: [] }
 
 export const favouritesSlice = createSlice({
 	name: 'favourites',
 	initialState,
 	reducers: {
 		addFavourite: (state, action: PayloadAction<People>) => {
-			state.character = [...state.character, { ...action.payload }]
+			state.characters = [...state.characters, { ...action.payload }]
 		},
 		removeFavourite: (state, action: PayloadAction<string>) => {
-			const indexToRemove = state.character.findIndex(el => el.name === action.payload)
-			const tempArr = state.character.splice(indexToRemove, 1)
-			state.character = tempArr
+			const indexToRemove = state.characters.findIndex(el => el.name === action.payload)
+			state.characters.splice(indexToRemove, 1)
 		},
 	},
 })
