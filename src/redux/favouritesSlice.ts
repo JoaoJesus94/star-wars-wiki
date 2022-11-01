@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { People } from '../types/people'
+import { People } from '../types'
 
 export interface FavouritesState {
 	character: People[]

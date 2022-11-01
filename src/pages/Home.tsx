@@ -1,7 +1,15 @@
+import { usePeople } from '../hooks/usePeople'
+
 export function Home() {
+	const { data } = usePeople()
+
+	console.log({ data })
+
 	return (
-		<div className="w-screen h-screen">
-			<h1 className="text-2xl">Hello world</h1>
-		</div>
+		<ul>
+			{data?.results.map(char => (
+				<li key={char.name}>{char.name}</li>
+			))}
+		</ul>
 	)
 }
