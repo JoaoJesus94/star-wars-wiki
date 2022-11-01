@@ -11,7 +11,7 @@ import './styles/global.css'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
-		queries: { refetchOnWindowFocus: false },
+		queries: { refetchOnWindowFocus: false, staleTime: Infinity },
 	},
 })
 
