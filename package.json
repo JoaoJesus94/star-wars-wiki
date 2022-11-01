@@ -14,7 +14,8 @@
 		"daisyui": "^2.37.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-redux": "^8.0.4"
+		"react-redux": "^8.0.4",
+		"react-router-dom": "^6.4.2"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.1.2",
