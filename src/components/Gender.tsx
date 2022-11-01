@@ -9,6 +9,8 @@ export function Gender({ gender, ...props }: GenderProps) {
 			return <GenderMale {...props} />
 		case 'female':
 			return <GenderFemale {...props} />
+		case 'n/a':
+			return <span>N/A</span>
 		default:
 			return <Question {...props} />
 	}
