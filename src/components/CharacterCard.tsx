@@ -1,18 +1,12 @@
 import { Link } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { HeartStraight } from 'phosphor-react'
 
 import { People } from '../types'
-import { RootState } from '../redux/store'
+
 import { addFavourite, removeFavourite } from '../redux/favouritesSlice'
 import { useIsFavourite } from '../redux/selectors'
-
-function extractIdFromUrl(url: string) {
-	return url
-		.split('/')
-		.filter(el => el)
-		.pop() as string
-}
+import { extractIdFromUrl } from '../utils'
 
 type CharacterCardProps = { character: People }
 
@@ -21,8 +15,8 @@ export function CharacterCard({ character }: CharacterCardProps) {
 	const dispatch = useDispatch()
 
 	return (
-		<li key={character.name} className="card w-96 bg-base-100 shadow-xl">
-			<Link to={`people/${extractIdFromUrl(character.url)}`}>
+		<li key={character.name} className="card w-96 bg-base-100 shadow-xl hover:bg-base-200">
+			<Link to={`character/${extractIdFromUrl(character.url)}`}>
 				<div className="card-body">
 					<div className="flex justify-between items-center">
 						<h2 className="card-title">{character.name}</h2>
