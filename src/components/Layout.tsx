@@ -9,7 +9,7 @@ export function Layout() {
 	return (
 		<>
 			<nav className="w-full flex items-center justify-between h-20 px-6 py-4 border-b border-b-slate-100">
-				<Link to={'/'}>
+				<Link to={'/star-wars-wiki'}>
 					<Logo className="h-8" />
 				</Link>
 				<div className="form-control">

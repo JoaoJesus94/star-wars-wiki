@@ -27,7 +27,7 @@ export function CharacterDetail() {
 
 	return (
 		<>
-			<Link className="link hover:text-accent-content" to="/">
+			<Link className="link hover:text-accent-content" to="/star-wars-wiki">
 				Back to home
 			</Link>
 			<div className="max-w-sm pt-8">
