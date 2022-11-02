@@ -14,7 +14,7 @@ function NotImplemented() {
 
 export const router = createBrowserRouter([
 	{
-		path: '/',
+		path: '/star-wars-wiki',
 		element: <Layout />,
 		children: [
 			{ path: '', element: <Home /> },
